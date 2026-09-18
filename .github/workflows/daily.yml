@@ -17,3 +17,9 @@ jobs:
           python-version: '3.11'
       - run: pip install requests
       - run: python bot.py
+            - run: |
+          git config --global user.name "bot"
+          git config --global user.email "bot@bot.com"
+          git add eth_paper.csv || true
+          git commit -m "Auto log update" || true
+          git push || true
